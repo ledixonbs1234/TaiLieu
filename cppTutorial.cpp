@@ -14,8 +14,8 @@ void setup_wifi(){
   delay(10);
   Serial.println();
   Serial.print("Dang ket noi toi: ");
-  Serial.println(ssid);
-  WiFi.begin(ssid,password);
+  Serial.println(STASSID);
+  WiFi.begin(STASSID,STAPSK);
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(500);
@@ -35,17 +35,16 @@ void callback(char* topic,byte* payload,unsigned int length){
   for (int i = 0; i < le; i++)
   {
     Serial.print((char)payload[i]);
-    Serial.println();
   }
 }
 
 void reconnect(){
   while (!client.connected())
   {
-    if(client.connect("ESP8266_id1","ESP_offline",0,0,"ESP8266_id1_offline"))
+    if(client.connect("sdfsdfsdfsdf"))
     {
-      Serial.println("Da ket noi : ");
-      client.subscribe("Iot47_MQTT_Test");
+      Serial.println("Da ket noi toi broker ");
+      client.subscribe("helloword");
     }
     else {
       Serial.print("Loi:, rc=");
@@ -71,10 +70,4 @@ void loop() {
   if(!client.connected())
   reconnect();
   client.loop();
-  if(millis() -t>500)
-  {
-    t =millis();
-    Serial.print("Gui tin nhan\"Xin Chao\" vao topic iot47");
-    client.publish("Iot47_MQTT_Test","Xin chao !");
-  }
 }
