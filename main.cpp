@@ -36,7 +36,7 @@ void setup()
 {
   //thuc hien cac lenh khoi tao trong nay
   Serial.begin(9600);
-  installCT1642(D5, D6);
+  setupCT1642(D5, D6);
   text = ESP.getFreeSketchSpace();
   Serial.print("ESP 8266 http update, current version: ");
   Serial.println(currentVersion);

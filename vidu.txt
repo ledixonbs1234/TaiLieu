@@ -1,0 +1,12 @@
+// int data = digitalRead(D5);
+  // count++;
+  // if (data == 0 && count > 300)
+  // {
+  //   count = 0;
+  //   Serial.println();
+  // }
+
+  // if (count < 300)
+  // {
+  //   Serial.print(data);
+  // }

@@ -510,7 +510,7 @@ void showNumber(int number)
   }
 }
 
-void installCT1642(int clk,int data){
+void setupCT1642(int clk,int data){
     CLK = clk;
     DATA = data;
 

@@ -1,5 +1,5 @@
 void chao();
-void installCT1642(int clk,int data);
+void setupCT1642(int clk,int data);
 
 void showNumber(int number);
 byte getCharByte(char character);
