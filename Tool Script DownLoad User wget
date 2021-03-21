@@ -1,0 +1,3 @@
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Internet Explorer\Main" -Name "DisableFirstRunCustomize" -Value 2
+
+wget "https://raw.githubusercontent.com/ledixonbs1234/ESPLibOTAGithub/master/src/update_firmware_github.cpp" -O tenfile.cpp
